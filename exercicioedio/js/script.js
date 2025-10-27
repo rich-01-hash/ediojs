@@ -10,6 +10,10 @@ const tituloPrin = document.getElementById("titulo-principal")
 const btnEnviar = document.getElementById("btn-enviar")
 const resultado = document.getElementById("resultado")
 const campName = document.getElementById("campo-nome")
+const bntcor = document.getElementById("btn-mudar-cor")
+const cor = document.getElementById("cores")
+const btnToggleMsg = document.getElementById("btn-toggle-msg")
+const corAtual = document.getElementById("cor-atual")
 let number = 0
 
 //atividade 1 
@@ -49,3 +53,23 @@ btnEnviar.addEventListener("click", function () {
         resultado.innerText = `olá ${campName.value} !`
     }
 })
+
+// atv 08 e 10  
+bntcor.addEventListener("click" , function (){
+  if(cor.style.backgroundColor === "yellow") {
+    cor.style.backgroundColor = "white"
+    corAtual.innerText = "cor atual: branco"
+  } else if (cor.style.backgroundColor === "white") {
+    cor.style.backgroundColor = "yellow"
+     corAtual.innerText = "cor atual: amarelo"
+  } else {
+    cor.style.backgroundColor = "yellow"
+     corAtual.innerText = "cor atual: amarelo"
+  }
+})
+
+//atv 09
+btnToggleMsg.addEventListener("click" , function(){
+    altMensagem.innerText = ""
+})
+
